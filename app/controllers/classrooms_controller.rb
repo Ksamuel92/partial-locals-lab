@@ -6,5 +6,6 @@ class ClassroomsController < ApplicationController
 
   def index
     @classrooms = Classroom.all
+    @search_students = Student.where("name LIKE ?", "%M%")
   end
 end
